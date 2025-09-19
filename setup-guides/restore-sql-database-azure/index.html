@@ -650,6 +650,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#architecture-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture at a Glance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture at a Glance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       Steps
@@ -660,27 +693,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-log-in-to-the-azure-portal" class="md-nav__link">
+  <a href="#1-sign-in-to-azure" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Log in to the Azure Portal
+      1) Sign in to Azure
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-locate-the-sql-server" class="md-nav__link">
+  <a href="#2-locate-the-source-database" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Locate the SQL Server
+      2) Locate the Source Database
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-initiate-the-restore" class="md-nav__link">
+  <a href="#3-start-a-restore" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Initiate the Restore
+      3) Start a Restore
     </span>
   </a>
   
@@ -689,16 +722,16 @@
           <li class="md-nav__item">
   <a href="#4-configure-restore-options" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Configure Restore Options
+      4) Configure Restore Options
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-start-the-restore" class="md-nav__link">
+  <a href="#5-deploy-the-restore" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Start the Restore
+      5) Deploy the Restore
     </span>
   </a>
   
@@ -868,6 +901,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#architecture-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture at a Glance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture at a Glance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       Steps
@@ -878,27 +944,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-log-in-to-the-azure-portal" class="md-nav__link">
+  <a href="#1-sign-in-to-azure" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Log in to the Azure Portal
+      1) Sign in to Azure
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-locate-the-sql-server" class="md-nav__link">
+  <a href="#2-locate-the-source-database" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Locate the SQL Server
+      2) Locate the Source Database
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-initiate-the-restore" class="md-nav__link">
+  <a href="#3-start-a-restore" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Initiate the Restore
+      3) Start a Restore
     </span>
   </a>
   
@@ -907,16 +973,16 @@
           <li class="md-nav__item">
   <a href="#4-configure-restore-options" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Configure Restore Options
+      4) Configure Restore Options
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-start-the-restore" class="md-nav__link">
+  <a href="#5-deploy-the-restore" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Start the Restore
+      5) Deploy the Restore
     </span>
   </a>
   
@@ -976,68 +1042,105 @@
 <h1 id="setup-guide-restore-sql-database-in-azure">Setup Guide: Restore SQL Database in Azure<a class="headerlink" href="#setup-guide-restore-sql-database-in-azure" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This guide explains how to restore a SQL database in Microsoft Azure using the Azure Portal.<br />
-It covers prerequisites, step-by-step instructions, and common issues you may encounter.</p>
-<p><strong>Audience:</strong> Cloud administrators, database administrators, support engineers<br />
+It covers prerequisites, architecture, step-by-step instructions, verification, and common issues.</p>
+<p><strong>Audience:</strong> Cloud administrators, database administrators, and support engineers<br />
 <strong>Skill Level:</strong> Beginner–Intermediate  </p>
 <hr />
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>An active Azure subscription  </li>
 <li>Access to the Azure Portal with sufficient permissions  </li>
-<li>An existing SQL Server instance in Azure  </li>
-<li>A database backup (automated backup or point-in-time restore available)  </li>
+<li>An existing Azure SQL Server instance  </li>
+<li>A database backup available (automated backup, geo-redundant, or long-term retention)  </li>
 </ul>
 <hr />
+<h2 id="architecture-at-a-glance">Architecture at a Glance<a class="headerlink" href="#architecture-at-a-glance" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Key Concepts</p>
+<ul>
+<li><strong>Backups</strong> are stored in Azure-managed storage.  </li>
+<li><strong>Restore</strong> creates a <strong>new database</strong>; it does not overwrite the source.  </li>
+<li><strong>Point-in-time restore (PITR)</strong> is typically fastest.  </li>
+<li><strong>Geo-restore</strong> and <strong>Long-term retention (LTR)</strong> restores can take longer, depending on size and region.</li>
+</ul>
+</div>
+<h3 id="flow-diagram">Flow Diagram<a class="headerlink" href="#flow-diagram" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>flowchart LR
+    A[Automated / LTR Backups] --&gt;|Point-in-time / Geo / LTR| B[(Azure Backup Storage)]
+    B --&gt; C[Azure Portal: Restore]
+    C --&gt; D{Choose Restore Type}
+    D --&gt;|Point-in-time| E[Create New Database&lt;br/&gt;(Same Server or Different Server)]
+    D --&gt;|Geo-restore| E
+    D --&gt;|Long-term retention| E
+    E --&gt; F[(Deployed Restored DB)]
+    F --&gt; G[Validate: Portal, SSMS, Azure Data Studio]
+</code></pre></div>
+<h3 id="sequence-diagram">Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sequenceDiagram
+    actor U as User (Portal)
+    participant P as Azure Portal
+    participant R as Restore Service
+    participant S as Azure SQL Server
+    participant B as Backup Storage
+
+    U-&gt;&gt;P: Open DB &gt; Restore
+    P-&gt;&gt;R: Submit restore request&lt;br/&gt;(type + time + target)
+    R-&gt;&gt;B: Read backup/restore point
+    R-&gt;&gt;S: Provision new database
+    S--&gt;&gt;R: New DB ready
+    R--&gt;&gt;P: Deployment complete
+    U-&gt;&gt;S: Connect via SSMS/Azure Data Studio
+</code></pre></div>
+<hr />
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
-<h3 id="1-log-in-to-the-azure-portal">1. Log in to the Azure Portal<a class="headerlink" href="#1-log-in-to-the-azure-portal" title="Permanent link">&para;</a></h3>
+<h3 id="1-sign-in-to-azure">1) Sign in to Azure<a class="headerlink" href="#1-sign-in-to-azure" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Navigate to <a href="https://portal.azure.com">https://portal.azure.com</a>  </li>
-<li>Sign in with your Azure credentials  </li>
+<li>Go to <a href="https://portal.azure.com">https://portal.azure.com</a> and sign in.</li>
 </ul>
-<h3 id="2-locate-the-sql-server">2. Locate the SQL Server<a class="headerlink" href="#2-locate-the-sql-server" title="Permanent link">&para;</a></h3>
+<h3 id="2-locate-the-source-database">2) Locate the Source Database<a class="headerlink" href="#2-locate-the-source-database" title="Permanent link">&para;</a></h3>
 <ul>
-<li>In the left-hand menu, select <strong>SQL databases</strong>  </li>
-<li>Choose the database you want to restore  </li>
+<li>In the left menu, select <strong>SQL databases</strong>.</li>
+<li>Click the database you want to restore.</li>
 </ul>
-<h3 id="3-initiate-the-restore">3. Initiate the Restore<a class="headerlink" href="#3-initiate-the-restore" title="Permanent link">&para;</a></h3>
+<h3 id="3-start-a-restore">3) Start a Restore<a class="headerlink" href="#3-start-a-restore" title="Permanent link">&para;</a></h3>
 <ul>
-<li>On the database overview page, select <strong>Restore</strong> from the toolbar  </li>
-<li>Choose a restore point:</li>
-<li><strong>Point-in-time restore</strong> (restore from automated backups)  </li>
-<li><strong>Geo-restore</strong> (restore from a geo-redundant backup)  </li>
-<li><strong>Long-term retention</strong> (restore from long-term storage, if configured)  </li>
+<li>On the database <strong>Overview</strong> page, select <strong>Restore</strong>.</li>
+<li>Choose the restore source:</li>
+<li><strong>Point-in-time</strong> (from automated backups)</li>
+<li><strong>Geo-restore</strong> (from geo-redundant backup)</li>
+<li><strong>Long-term retention (LTR)</strong> (from archived backups)</li>
 </ul>
-<h3 id="4-configure-restore-options">4. Configure Restore Options<a class="headerlink" href="#4-configure-restore-options" title="Permanent link">&para;</a></h3>
+<h3 id="4-configure-restore-options">4) Configure Restore Options<a class="headerlink" href="#4-configure-restore-options" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Provide a new database name (restored DB must have a unique name)  </li>
-<li>Select the target server and resource group  </li>
-<li>Configure pricing tier if needed  </li>
+<li>Enter a <strong>new database name</strong> (must be unique).</li>
+<li>Select the <strong>target server</strong> and resource group.</li>
+<li>(Optional) Adjust <strong>compute/storage</strong> tier for the restored DB.</li>
 </ul>
-<h3 id="5-start-the-restore">5. Start the Restore<a class="headerlink" href="#5-start-the-restore" title="Permanent link">&para;</a></h3>
+<h3 id="5-deploy-the-restore">5) Deploy the Restore<a class="headerlink" href="#5-deploy-the-restore" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Click <strong>Review + Create</strong>  </li>
-<li>Confirm settings and click <strong>Create</strong>  </li>
-<li>Wait for deployment to complete  </li>
+<li>Click <strong>Review + create</strong> → <strong>Create</strong>.</li>
+<li>Wait for the deployment to complete (time varies by size/type).</li>
 </ul>
 <hr />
 <h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Navigate to <strong>SQL databases</strong> in the Azure Portal  </li>
-<li>Confirm that the restored database appears in the list  </li>
-<li>Connect using <strong>SQL Server Management Studio (SSMS)</strong> or <strong>Azure Data Studio</strong> to verify data  </li>
+<li>In <strong>SQL databases</strong>, confirm the <strong>restored database</strong> appears.</li>
+<li>Connect using <strong>SQL Server Management Studio (SSMS)</strong> or <strong>Azure Data Studio</strong>.</li>
+<li>Validate schema and data (spot-check key tables).</li>
 </ol>
 <hr />
 <h2 id="common-issues-fixes">Common Issues &amp; Fixes<a class="headerlink" href="#common-issues-fixes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Error: Database name already exists</strong> → Use a unique name for the restored database.  </li>
-<li><strong>Insufficient permissions</strong> → Ensure your account has the <em>Contributor</em> or <em>SQL DB Contributor</em> role.  </li>
-<li><strong>Restore takes too long</strong> → Larger databases may take several hours depending on size and backup type.  </li>
+<li><strong>“Database name already exists.”</strong> → Use a unique name for the restored database.  </li>
+<li><strong>Insufficient permissions.</strong> → Ensure your account has <em>Contributor</em> or <em>SQL DB Contributor</em> role.  </li>
+<li><strong>Restore seems slow.</strong> → Large DBs, geo-restores, or LTR restores can take hours depending on region/size.  </li>
+<li><strong>Cannot connect after restore.</strong> → Update <strong>firewall rules</strong> on the SQL Server to allow your client IPs.  </li>
 </ul>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/recovery-using-backups">Microsoft Docs: Restore a database in Azure SQL Database</a>  </li>
-<li><a href="https://portal.azure.com">Azure Portal</a>  </li>
+<li>Microsoft Docs — <strong>Restore a database in Azure SQL Database</strong>: <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/recovery-using-backups">https://learn.microsoft.com/en-us/azure/azure-sql/database/recovery-using-backups</a>  </li>
+<li><strong>Azure Portal</strong>: <a href="https://portal.azure.com">https://portal.azure.com</a></li>
 </ul>
 
 
