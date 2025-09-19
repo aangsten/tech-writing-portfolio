@@ -1,0 +1,59 @@
+site_name: Technical Writing Portfolio
+site_url: https://aangsten.github.io/tech-writing-portfolio/
+site_description: "Portfolio showcasing my technical writing samples: tutorials, troubleshooting guides, setup docs, and conceptual articles."
+site_author: Andrew Angsten
+
+repo_url: https://github.com/aangsten/tech-writing-portfolio
+repo_name: GitHub
+
+theme:
+  name: material
+  features:
+    - navigation.instant       # Fast navigation
+    - navigation.tabs          # Tabs for sections
+    - navigation.top           # "Back to top" button
+    - search.highlight         # Highlight search results
+    - search.suggest           # Search suggestions
+    - content.code.copy        # Copy-to-clipboard button for code blocks
+    - content.code.annotate    # Allow code annotations
+    - content.tabs.link        # Tabs for content (optional)
+    - palette.toggle           # Dark/light mode toggle
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.emoji
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Automating F5 Load Balancer Tasks: tutorials/f5-powershell-automation.md
+  - Troubleshooting:
+      - SQL Epoch Conversion: troubleshooting/sql-epoch-conversion.md
+  - Setup Guides:
+      - Restore SQL Database in Azure: setup-guides/restore-sql-database-azure.md
+  - Concepts:
+      - High Availability Basics: concepts/high-availability-basics.md
