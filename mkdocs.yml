@@ -49,6 +49,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - About: about.md
   - Tutorials:
       - Automating F5 Load Balancer Tasks: tutorials/f5-powershell-automation.md
   - Troubleshooting:
