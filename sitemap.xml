@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://aangsten.github.io/tech-writing-portfolio/</loc>
+         <lastmod>2025-09-19</lastmod>
+    </url>
+    <url>
+         <loc>https://aangsten.github.io/tech-writing-portfolio/concepts/high-availability-basics/</loc>
+         <lastmod>2025-09-19</lastmod>
+    </url>
+    <url>
+         <loc>https://aangsten.github.io/tech-writing-portfolio/setup-guides/restore-sql-database-azure/</loc>
+         <lastmod>2025-09-19</lastmod>
+    </url>
+    <url>
+         <loc>https://aangsten.github.io/tech-writing-portfolio/troubleshooting/sql-epoch-conversion/</loc>
+         <lastmod>2025-09-19</lastmod>
+    </url>
+    <url>
+         <loc>https://aangsten.github.io/tech-writing-portfolio/tutorials/f5-powershell-automation/</loc>
+         <lastmod>2025-09-19</lastmod>
+    </url>
 </urlset>
