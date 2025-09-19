@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Restore SQL Database in Azure - Technical Writing Portfolio</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Restore SQL Database in Azure";
+        var mkdocs_page_input_path = "setup-guides\\restore-sql-database-azure.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Technical Writing Portfolio
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/f5-powershell-automation/">Automating F5 Load Balancer Tasks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/sql-epoch-conversion/">SQL Epoch Conversion</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Setup Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Restore SQL Database in Azure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#restore-procedure">Restore procedure</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../concepts/high-availability-basics/">High Availability Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Technical Writing Portfolio</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Setup Guides</li>
+      <li class="breadcrumb-item active">Restore SQL Database in Azure</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="restoring-sql-database-in-azure-portal">Restoring SQL Database in Azure Portal</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This guide describes how to restore a SQL Database using the Azure Portal. It covers selecting the correct subscription and database, performing a restore, configuring the database, and optionally moving the restored database into an elastic pool.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Access to the Azure Portal with permissions to restore databases.</li>
+<li>Knowledge of the production database name (for example <code>xyz_prod</code>).</li>
+</ul>
+<h2 id="restore-procedure">Restore procedure</h2>
+<ol>
+<li>Sign in to the Azure Portal</li>
+<li>
+<p>Open: <code>https://portal.azure.com/#home</code></p>
+</li>
+<li>
+<p>Open SQL Databases</p>
+</li>
+<li>
+<p>From Home, select <strong>SQL Databases</strong>.</p>
+</li>
+<li>
+<p>Change subscription</p>
+</li>
+<li>
+<p>If needed, switch the subscription to <strong>XYZ Production</strong>.</p>
+</li>
+<li>
+<p>Locate the production database</p>
+</li>
+<li>
+<p>Search for the company name (for example: <code>XYZ</code>) and open the production database (for example: <code>xyz_prod</code>).</p>
+</li>
+<li>
+<p>Start a restore</p>
+</li>
+<li>
+<p>Click <strong>Restore</strong> on the database blade.</p>
+</li>
+<li>
+<p>Set restore point and time adjustments</p>
+</li>
+<li>Choose the backup/restore point you need.</li>
+<li>
+<p>If the restore time crosses a daylight savings boundary:</p>
+<ul>
+<li>For fall (clocks back): set the UTC offset to <strong>+6</strong> hours (based on Central Time).</li>
+<li>For spring (clocks forward): set the UTC offset to <strong>+5</strong> hours (based on Central Time).</li>
+</ul>
+</li>
+<li>
+<p>Name the restored database</p>
+</li>
+<li>
+<p>Remove any timestamp from the suggested name and add a identifying suffix (for example: <code>_andrew</code> or <code>_dr</code>).</p>
+</li>
+<li>
+<p>Configure compute and storage</p>
+</li>
+<li>Service tier: <strong>Standard</strong></li>
+<li>DTUs: <strong>400</strong></li>
+<li>
+<p>Backup storage redundancy: <strong>Locally-redundant backup storage</strong></p>
+</li>
+<li>
+<p>Review and create</p>
+</li>
+<li>Click <strong>Review + Create</strong>, verify settings, then <strong>Create</strong>.</li>
+<li>
+<p>Wait until deployment completes.</p>
+</li>
+<li>
+<p>Open the restored resource</p>
+<ul>
+<li>Click <strong>Go to resource</strong> once deployment finishes.</li>
+</ul>
+</li>
+<li>
+<p>(Optional) Copy or rename for data restore workflows</p>
+<ul>
+<li>From the restored database <strong>Overview</strong>, use <strong>Copy</strong> if you need a separate copy.</li>
+<li>Append <code>dr</code> (or another suffix) to indicate a data-restore copy.</li>
+</ul>
+</li>
+<li>
+<p>Select restore server</p>
+<ul>
+<li>Example target server: <code>restoresql01</code> (East US 2).</li>
+<li>Confirm backup storage redundancy is set to <strong>Locally-redundant</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Move the database into an elastic pool (optional)</p>
+<ul>
+<li>Open the server (for example: <code>restoresql01.database.windows.net</code>).</li>
+<li>Under <strong>SQL elastic pool</strong>, select <code>restoresql01_ep01</code> → <strong>Configure</strong> → <strong>Databases</strong> → <strong>Add databases</strong>.</li>
+<li>Check the newly restored database and click <strong>Apply</strong>, then <strong>Save</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Clean up / delete old or test databases (if required)</p>
+<ul>
+<li>From <strong>SQL Databases</strong>, select the database to delete.</li>
+<li>Follow the delete confirmation steps:</li>
+<li>Type your name when prompted.</li>
+<li>Check the database (for example: <code>xyz_prod_andrew</code>) and click <strong>Delete</strong>.</li>
+<li>Type <code>delete</code> to confirm.</li>
+</ul>
+</li>
+</ol>
+<p>These steps provide a comprehensive guide to restoring a SQL database in the Azure Portal, ensuring proper configurations and necessary adjustments are made throughout the process.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../troubleshooting/sql-epoch-conversion/" class="btn btn-neutral float-left" title="SQL Epoch Conversion"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../concepts/high-availability-basics/" class="btn btn-neutral float-right" title="High Availability Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../troubleshooting/sql-epoch-conversion/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../concepts/high-availability-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
